@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Hero from '../components/Hero.astro';
 import Problem from '../components/Problem.astro';
+import Value from '../components/Value.astro';
 import Features from '../components/Features.astro';
 import { APP_URL } from '../config';
 ---
@@ -16,6 +17,7 @@ import { APP_URL } from '../config';
   <body>
     <Hero appUrl={APP_URL} />
     <Problem />
+    <Value appUrl={APP_URL} />
     <Features />
   </body>
 </html>
