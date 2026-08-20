@@ -1,0 +1,156 @@
+---
+import { Image } from 'astro:assets';
+import screenshotTask from '../assets/placeholder-screenshot-task.svg';
+import screenshotReview from '../assets/placeholder-screenshot-review.svg';
+import screenshotAnalytics from '../assets/placeholder-screenshot-analytics.svg';
+
+const features = [
+  {
+    title: 'タスク管理機能',
+    bullets: [
+      'プロジェクトとタスクグループでタスクを体系的に管理できます',
+      'タスクを作成する際は必ず見積もり時間を設定します',
+      'タスクに取り組んでいる時間をタイマーか手動で記録できます',
+      'タイマー記録中はモーダルを閉じたりページを移動してもOK！新しいタスクを思いついたらすぐに作成しましょう',
+      '稼働中のタイマーはグローバルナビゲーションからクイックアクセスできます',
+      '貼って剥がせるメモ付箋を活用して、作業の立ち上がりを早くできます。覚えておきたいことはサッとメモして、終わったら削除しましょう',
+      'タスクを完了したら、振り返り機能にクイックアクセスできます。忘れないうちに振り返りましょう',
+    ],
+    image: {
+      src: screenshotTask,
+      alt: 'タスク管理機能のスクリーンショット（プレースホルダー）',
+    },
+  },
+  {
+    title: '振り返り機能',
+    bullets: [
+      'タスク、タスクグループ、プロジェクトそれぞれの単位で、ずれ方と実績時間と見積時間の誤差と誤差率を一望できます',
+      'ずれの原因カテゴリを1つ以上3つまで選択できます。カテゴリで表現しきれない反省点は自由入力欄を活用してください。',
+      'ずれの原因カテゴリは、超過のケースと短縮のケースそれぞれに対応！',
+      '真摯に入力することが、分析機能の価値をぐんと上げます！',
+    ],
+    image: {
+      src: screenshotReview,
+      alt: '振り返り機能のスクリーンショット（プレースホルダー）',
+    },
+  },
+  {
+    title: '分析機能',
+    bullets: [
+      '振り返り機能で選択した原因カテゴリや、1タスクごとの見積時間の大きさ、またそのばらつきなどを統計的に整理して、視覚的にわかりやすく表示します。',
+      '※詳細実装中。文章ごと大きく差し替える可能性大です',
+    ],
+    image: {
+      src: screenshotAnalytics,
+      alt: '分析機能のスクリーンショット（プレースホルダー）',
+    },
+  },
+];
+---
+
+<section class="features">
+  <div class="container">
+    <h2 class="features__heading">主な機能</h2>
+    {features.map((feature, index) => (
+      <div class={`features__item ${index % 2 === 1 ? 'features__item--reverse' : ''}`}>
+        <div class="features__text">
+          <h3 class="features__title">{feature.title}</h3>
+          <ul class="features__list">
+            {feature.bullets.map((bullet) => (
+              <li>{bullet}</li>
+            ))}
+          </ul>
+        </div>
+        <div class="features__image-wrap">
+          <Image
+            src={feature.image.src}
+            alt={feature.image.alt}
+            width={480}
+            height={320}
+            class="features__image"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 4rem 1rem;
+    background-color: var(--color-bg);
+  }
+
+  .features__heading {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--color-text);
+    text-align: center;
+    margin: 0 0 3rem;
+  }
+
+  .features__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .features__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .features__title {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0 0 0.75rem;
+  }
+
+  .features__list {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .features__list li {
+    color: var(--color-text);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  .features__image-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .features__image {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--color-surface-muted);
+  }
+
+  @media (min-width: 768px) {
+    .features__item {
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .features__item--reverse {
+      flex-direction: row-reverse;
+    }
+
+    .features__text {
+      flex: 1;
+    }
+
+    .features__image-wrap {
+      flex: 1;
+    }
+  }
+</style>

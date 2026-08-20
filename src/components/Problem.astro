@@ -1,0 +1,51 @@
+<section class="problem">
+  <div class="container problem__inner">
+    <h2 class="problem__question">タスクが想定した時間通りに終わらないのはどうしてだろう？</h2>
+    <p class="problem__answer">根拠を持って時間を見積れていないから！</p>
+    <div class="problem__body">
+      <p>タスクやプロジェクトが想定した時間通りに終わらないことは、往々にしてあります。でも、それでは困りますよね。あなたの時間は有限であり、時間はお金を得るための大切な資本になります。</p>
+      <p>「このくらいの時間(工数)がかかるから、報酬はこのくらいです。」クライアントにそう伝えて対価を受け取ったのに、見積もり時間を超えても終わらなければ、あなたは睡眠時間を削って働いた分のお金をもらえず損をします。伝えた時間よりも過度に早く終わっても信頼を損なう可能性があります。</p>
+      <p>「今抱えているタスクにこれくらい時間がかかるから、さっき来た仕事は断らないといけない」このようなケースでも、抱えていたタスクが思いの外早く終わった場合、受けられたはずの仕事の対価が得られず後悔するでしょう。</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem {
+    padding: 4rem 1rem;
+    background-color: var(--color-surface);
+  }
+
+  .problem__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .problem__question {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin: 0 0 1.25rem;
+  }
+
+  .problem__answer {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 800;
+    color: var(--color-accent);
+    margin: 0 0 2rem;
+  }
+
+  .problem__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .problem__body p {
+    margin: 0;
+    color: var(--color-text);
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+</style>
