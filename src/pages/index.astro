@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Hero from '../components/Hero.astro';
+import { APP_URL } from '../config';
 ---
 
 <!doctype html>
@@ -10,5 +12,6 @@ import '../styles/global.css';
     <title>Task Time Tracker</title>
   </head>
   <body>
+    <Hero appUrl={APP_URL} />
   </body>
 </html>

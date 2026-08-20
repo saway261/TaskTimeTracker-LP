@@ -1,0 +1,102 @@
+---
+import { Image } from 'astro:assets';
+import placeholderIcon from '../assets/placeholder-icon.svg';
+
+interface Props {
+  appUrl: string;
+}
+
+const { appUrl } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <p class="hero__service-name">Task Time Tracker</p>
+      <h1 class="hero__catch">己と向き合うタスク管理アプリ</h1>
+      <a href={appUrl} class="btn-primary">使ってみる</a>
+    </div>
+    <div class="hero__visual">
+      <Image
+        src={placeholderIcon}
+        alt="Task Time Tracker サービスアイコン（プレースホルダー）"
+        width={200}
+        height={200}
+        class="hero__logo"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
+    padding: 4rem 1rem;
+  }
+
+  .hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .hero__service-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .hero__catch {
+    margin: 0;
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--color-text);
+  }
+
+  .hero__visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__logo {
+    width: clamp(120px, 30vw, 200px);
+    height: auto;
+  }
+
+  @media (min-width: 1024px) {
+    .hero__inner {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .hero__text {
+      align-items: flex-start;
+      flex: 1;
+    }
+
+    .hero__visual {
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    .hero__logo {
+      width: 200px;
+      height: 200px;
+    }
+  }
+</style>
