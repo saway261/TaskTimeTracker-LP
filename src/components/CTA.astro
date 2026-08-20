@@ -1,0 +1,54 @@
+---
+interface Props {
+  appUrl: string;
+}
+
+const { appUrl } = Astro.props;
+---
+
+<section class="cta">
+  <div class="container">
+    <p class="cta__text">Task Time Tracker は自分の能力や作業スピードを適切に見積もる力を培うための助けになります。</p>
+    <p class="cta__text">もう睡眠時間は削らない！　その1時間を何のために使うのか、あなた自身が完璧に決めましょう！</p>
+    <div class="cta__action">
+      <a href={appUrl} class="btn-primary cta__btn">使ってみる</a>
+      <p class="cta__note">※当面のあいだ無料で利用できます。</p>
+      <p class="cta__note">※ユーザ登録にはメールアドレスが必要です。</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta {
+    padding: 5rem 1rem;
+    background-color: var(--color-surface);
+    text-align: center;
+  }
+
+  .cta__text {
+    font-size: 1.125rem;
+    color: var(--color-text);
+    line-height: 1.8;
+    margin: 0 auto 1rem;
+    max-width: 640px;
+  }
+
+  .cta__action {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .cta__btn {
+    font-size: 1.125rem;
+    padding: 1rem 3rem;
+  }
+
+  .cta__note {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+  }
+</style>
