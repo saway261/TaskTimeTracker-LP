@@ -1,4 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import timerSvg from '../assets/value/timer.svg';
+import searchSvg from '../assets/value/search.svg';
+import graphSvg from '../assets/value/graph.svg';
+import glitterSvg from '../assets/value/glitter.svg';
+
 interface Props {
   appUrl: string;
 }
@@ -7,19 +13,19 @@ const { appUrl } = Astro.props;
 
 const values = [
   {
-    icon: '⏱️',
+    icon: timerSvg,
     text: 'Task Time Tracker は、タスクを「見積時間」と「実績時間」のセットで管理します。',
   },
   {
-    icon: '🔍',
+    icon: searchSvg,
     text: 'さらに、振り返り機能でタスクの実績時間が見積時間より超過あるいは短縮した際の原因を保存します。',
   },
   {
-    icon: '📈',
+    icon: graphSvg,
     text: '見積と実績の誤差を継続的に記録・内省することで己と向き合う作業をアシストします。',
   },
   {
-    icon: '🎯',
+    icon: glitterSvg,
     text: 'あなたの見積もりのクセを明らかにし、見積もり精度の改善に役立ててください！',
   },
 ];
@@ -30,7 +36,9 @@ const values = [
     <ul class="value__list">
       {values.map((item) => (
         <li class="value__item">
-          <span class="value__icon" aria-hidden="true">{item.icon}</span>
+          <span class="value__icon" aria-hidden="true">
+            <Image src={item.icon} alt="" width={44} height={44} class="value__icon-image" />
+          </span>
           <p class="value__text">{item.text}</p>
         </li>
       ))}
@@ -67,9 +75,19 @@ const values = [
   }
 
   .value__icon {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
     flex-shrink: 0;
-    line-height: 1.4;
+  }
+
+  .value__icon-image {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
   }
 
   .value__text {

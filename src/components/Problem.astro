@@ -2,6 +2,9 @@
 import { Image } from 'astro:assets';
 import questionSvg from '../assets/question.svg';
 import answerSvg from '../assets/answer.svg';
+import moneySvg from '../assets/problem/money.svg';
+import busySvg from '../assets/problem/busy.svg';
+import badSvg from '../assets/problem/bad.svg';
 ---
 
 <section class="problem">
@@ -43,9 +46,28 @@ import answerSvg from '../assets/answer.svg';
 
     <!-- 本文 -->
     <div class="problem__body">
-      <p>タスクやプロジェクトが想定した時間通りに終わらないことは、往々にしてあります。でも、それでは困りますよね。あなたの時間は有限であり、時間はお金を得るための大切な資本になります。</p>
-      <p>「このくらいの時間(工数)がかかるから、報酬はこのくらいです。」クライアントにそう伝えて対価を受け取ったのに、見積もり時間を超えても終わらなければ、あなたは睡眠時間を削って働いた分のお金をもらえず損をします。伝えた時間よりも過度に早く終わっても信頼を損なう可能性があります。</p>
-      <p>「今抱えているタスクにこれくらい時間がかかるから、さっき来た仕事は断らないといけない」このようなケースでも、抱えていたタスクが思いの外早く終わった場合、受けられたはずの仕事の対価が得られず後悔するでしょう。</p>
+      <div class="problem__body-group">
+        <p>タスクやプロジェクトが想定した時間通りに終わらないことは、往々にしてあります。</p>
+        <p>でも、それでは困りますよね。</p>
+        <p>あなたの時間は有限であり、時間はお金を得るための大切な資本になります。</p>
+        <Image src={moneySvg} alt="" class="problem__body-illustration" />
+      </div>
+
+      <div class="problem__body-group">
+        <p class="problem__emphasis"><strong>「このくらいの時間(工数)がかかるから、報酬はこのくらいです。」</strong></p>
+        <p>クライアントにそう伝えて対価を受け取ったのに、見積もり時間を超えても終わらなければ、あなたは睡眠時間を削って働いた分のお金をもらえず損をします。<br />伝えた時間よりも過度に早く終わっても、信頼を損なう可能性があります。</p>
+        <Image src={busySvg} alt="" class="problem__body-illustration" />
+      </div>
+
+      <div class="problem__body-group">
+        <p class="problem__emphasis"><strong>「今抱えているタスクにこれくらい時間がかかるから、さっき来た仕事は断らないといけない」</strong></p>
+        <p>このようなケースでも、抱えていたタスクが思いの外早く終わった場合、受けられたはずの仕事の対価が得られず後悔するでしょう。</p>
+        <Image src={badSvg} alt="" class="problem__body-illustration" />
+      </div>
+
+      <div class="problem__body-group">
+        <p class="problem__emphasis"><strong>Task Time Tracker は、そのような繰り返すお悩みを解決する一助となります</strong></p>
+      </div>
     </div>
   </div>
 </section>
@@ -174,6 +196,12 @@ import answerSvg from '../assets/answer.svg';
   .problem__body {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  .problem__body-group {
+    display: flex;
+    flex-direction: column;
     gap: 1.25rem;
   }
 
@@ -182,6 +210,16 @@ import answerSvg from '../assets/answer.svg';
     color: var(--color-text);
     line-height: 1.8;
     font-size: 1rem;
+  }
+
+  .problem__body .problem__emphasis {
+    text-align: center;
+  }
+
+  .problem__body-illustration {
+    width: min(72vw, 320px);
+    height: auto;
+    margin: 0.5rem auto 0;
   }
 
   /* モバイル対応 */
