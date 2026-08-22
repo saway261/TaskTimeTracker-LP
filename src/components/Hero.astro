@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import placeholderIcon from '../assets/placeholder-icon.svg';
+import icon from '../assets/icon.svg';
+import titleLogo from '../assets/title.svg';
 
 interface Props {
   appUrl: string;
@@ -12,14 +13,19 @@ const { appUrl } = Astro.props;
 <section class="hero">
   <div class="container hero__inner">
     <div class="hero__text">
-      <p class="hero__service-name">Task Time Tracker</p>
+      <Image
+        src={titleLogo}
+        alt="Task Time Tracker"
+        height={40}
+        class="hero__title-logo"
+      />
       <h1 class="hero__catch">己と向き合うタスク管理アプリ</h1>
       <a href={appUrl} class="btn-primary">使ってみる</a>
     </div>
     <div class="hero__visual">
       <Image
-        src={placeholderIcon}
-        alt="Task Time Tracker サービスアイコン（プレースホルダー）"
+        src={icon}
+        alt="Task Time Tracker アイコン"
         width={200}
         height={200}
         class="hero__logo"
@@ -49,13 +55,9 @@ const { appUrl } = Astro.props;
     gap: 1.25rem;
   }
 
-  .hero__service-name {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+  .hero__title-logo {
+    height: 40px;
+    width: auto;
   }
 
   .hero__catch {

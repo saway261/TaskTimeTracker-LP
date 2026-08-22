@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import placeholderIcon from '../assets/placeholder-icon.svg';
+import icon from '../assets/icon.svg';
+import titleLogo from '../assets/title.svg';
 
 interface Props {
   appUrl: string;
@@ -13,13 +14,18 @@ const { appUrl } = Astro.props;
   <div class="container site-header__inner">
     <a href="/" class="site-header__brand">
       <Image
-        src={placeholderIcon}
+        src={icon}
         alt="Task Time Tracker アイコン"
         width={32}
         height={32}
         class="site-header__icon"
       />
-      <span class="site-header__name">Task Time Tracker</span>
+      <Image
+        src={titleLogo}
+        alt="Task Time Tracker"
+        height={24}
+        class="site-header__title"
+      />
     </a>
     <a href={appUrl} class="btn-primary site-header__cta">使ってみる</a>
   </div>
@@ -56,12 +62,9 @@ const { appUrl } = Astro.props;
     height: 32px;
   }
 
-  .site-header__name {
-    font-weight: 700;
-    font-size: 0.95rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .site-header__title {
+    height: 24px;
+    width: auto;
   }
 
   .site-header__cta {
