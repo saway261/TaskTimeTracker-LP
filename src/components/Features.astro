@@ -1,74 +1,80 @@
 ---
 import { Image } from 'astro:assets';
-import screenshotTask from '../assets/placeholder-screenshot-task.svg';
-import screenshotReview from '../assets/placeholder-screenshot-review.svg';
-import screenshotAnalytics from '../assets/placeholder-screenshot-analytics.svg';
+
+import ssTask01 from '../assets/screenshot-task-01.svg';
+import ssTask02 from '../assets/screenshot-task-02.svg';
+import ssTask03 from '../assets/screenshot-task-03.svg';
+import ssTask04 from '../assets/screenshot-task-04.svg';
+import ssTask05 from '../assets/screenshot-task-05.svg';
+import ssTask06 from '../assets/screenshot-task-06.svg';
+import ssTask07 from '../assets/screenshot-task-07.svg';
+import ssReview01 from '../assets/screenshot-review-01.svg';
+import ssReview02 from '../assets/screenshot-review-02.svg';
+import ssReview03 from '../assets/screenshot-review-03.svg';
+import ssReview04 from '../assets/screenshot-review-04.svg';
+import ssAnalytics01 from '../assets/screenshot-analytics-01.svg';
+import ssAnalytics02 from '../assets/screenshot-analytics-02.svg';
 
 const features = [
   {
     title: 'タスク管理機能',
-    bullets: [
-      'プロジェクトとタスクグループでタスクを体系的に管理できます',
-      'タスクを作成する際は必ず見積もり時間を設定します',
-      'タスクに取り組んでいる時間をタイマーか手動で記録できます',
-      'タイマー記録中はモーダルを閉じたりページを移動してもOK！新しいタスクを思いついたらすぐに作成しましょう',
-      '稼働中のタイマーはグローバルナビゲーションからクイックアクセスできます',
-      '貼って剥がせるメモ付箋を活用して、作業の立ち上がりを早くできます。覚えておきたいことはサッとメモして、終わったら削除しましょう',
-      'タスクを完了したら、振り返り機能にクイックアクセスできます。忘れないうちに振り返りましょう',
+    items: [
+      { text: 'プロジェクトとタスクグループでタスクを体系的に管理できます', img: ssTask01, alt: 'タスク管理機能: プロジェクト管理' },
+      { text: 'タスクを作成する際は必ず見積もり時間を設定します', img: ssTask02, alt: 'タスク管理機能: 見積もり時間設定' },
+      { text: 'タスクに取り組んでいる時間をタイマーか手動で記録できます', img: ssTask03, alt: 'タスク管理機能: タイマー・手動記録' },
+      { text: 'タイマー記録中はモーダルを閉じたりページを移動してもOK！新しいタスクを思いついたらすぐに作成しましょう', img: ssTask04, alt: 'タスク管理機能: タイマー継続動作' },
+      { text: '稼働中のタイマーはグローバルナビゲーションからクイックアクセスできます', img: ssTask05, alt: 'タスク管理機能: グローバルナビ' },
+      { text: '貼って剥がせるメモ付箋を活用して、作業の立ち上がりを早くできます。覚えておきたいことはサッとメモして、終わったら削除しましょう', img: ssTask06, alt: 'タスク管理機能: メモ付箋' },
+      { text: 'タスクを完了したら、振り返り機能にクイックアクセスできます。忘れないうちに振り返りましょう', img: ssTask07, alt: 'タスク管理機能: 振り返りクイックアクセス' },
     ],
-    image: {
-      src: screenshotTask,
-      alt: 'タスク管理機能のスクリーンショット（プレースホルダー）',
-    },
   },
   {
     title: '振り返り機能',
-    bullets: [
-      'タスク、タスクグループ、プロジェクトそれぞれの単位で、ずれ方と実績時間と見積時間の誤差と誤差率を一望できます',
-      'ずれの原因カテゴリを1つ以上3つまで選択できます。カテゴリで表現しきれない反省点は自由入力欄を活用してください。',
-      'ずれの原因カテゴリは、超過のケースと短縮のケースそれぞれに対応！',
-      '真摯に入力することが、分析機能の価値をぐんと上げます！',
+    items: [
+      { text: 'タスク、タスクグループ、プロジェクトそれぞれの単位で、ずれ方と実績時間と見積時間の誤差と誤差率を一望できます', img: ssReview01, alt: '振り返り機能: 誤差一覧' },
+      { text: 'ずれの原因カテゴリを1つ以上3つまで選択できます。カテゴリで表現しきれない反省点は自由入力欄を活用してください。', img: ssReview02, alt: '振り返り機能: 原因カテゴリ選択' },
+      { text: 'ずれの原因カテゴリは、超過のケースと短縮のケースそれぞれに対応！', img: ssReview03, alt: '振り返り機能: 超過・短縮対応' },
+      { text: '真摯に入力することが、分析機能の価値をぐんと上げます！', img: ssReview04, alt: '振り返り機能: 真摯な入力' },
     ],
-    image: {
-      src: screenshotReview,
-      alt: '振り返り機能のスクリーンショット（プレースホルダー）',
-    },
   },
   {
     title: '分析機能',
-    bullets: [
-      '振り返り機能で選択した原因カテゴリや、1タスクごとの見積時間の大きさ、またそのばらつきなどを統計的に整理して、視覚的にわかりやすく表示します。',
-      '※詳細実装中。文章ごと大きく差し替える可能性大です',
+    items: [
+      { text: '振り返り機能で選択した原因カテゴリや、1タスクごとの見積時間の大きさ、またそのばらつきなどを統計的に整理して、視覚的にわかりやすく表示します。', img: ssAnalytics01, alt: '分析機能: 統計・視覚化' },
+      { text: '※詳細実装中。文章ごと大きく差し替える可能性大です', img: ssAnalytics02, alt: '分析機能: 詳細実装中' },
     ],
-    image: {
-      src: screenshotAnalytics,
-      alt: '分析機能のスクリーンショット（プレースホルダー）',
-    },
   },
 ];
+
+// 全itemをフラットにして通し番号で交互レイアウトを決める
+const allRows: { text: string; img: ImageMetadata; alt: string; groupTitle: string; isFirstInGroup: boolean; rowIndex: number }[] = [];
+let rowIndex = 0;
+for (const feature of features) {
+  feature.items.forEach((item, i) => {
+    allRows.push({ ...item, groupTitle: feature.title, isFirstInGroup: i === 0, rowIndex: rowIndex++ });
+  });
+}
 ---
 
 <section class="features">
   <div class="container">
     <h2 class="features__heading">主な機能</h2>
-    {features.map((feature, index) => (
-      <div class={`features__item ${index % 2 === 1 ? 'features__item--reverse' : ''}`}>
-        <div class="features__text">
-          <h3 class="features__title">{feature.title}</h3>
-          <ul class="features__list">
-            {feature.bullets.map((bullet) => (
-              <li>{bullet}</li>
-            ))}
-          </ul>
-        </div>
-        <div class="features__image-wrap">
-          <Image
-            src={feature.image.src}
-            alt={feature.image.alt}
-            width={480}
-            height={320}
-            class="features__image"
-          />
+    {allRows.map((row) => (
+      <div>
+        {row.isFirstInGroup && (
+          <h3 class="features__group-title">{row.groupTitle}</h3>
+        )}
+        <div class={`features__row ${row.rowIndex % 2 === 1 ? 'features__row--reverse' : ''}`}>
+          <p class="features__text">{row.text}</p>
+          <div class="features__image-wrap">
+            <Image
+              src={row.img}
+              alt={row.alt}
+              width={480}
+              height={320}
+              class="features__image"
+            />
+          </div>
         </div>
       </div>
     ))}
@@ -89,36 +95,27 @@ const features = [
     margin: 0 0 3rem;
   }
 
-  .features__item {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-  }
-
-  .features__item:last-child {
-    margin-bottom: 0;
-  }
-
-  .features__title {
+  .features__group-title {
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     font-weight: 700;
     color: var(--color-accent);
-    margin: 0 0 0.75rem;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-surface-muted);
   }
 
-  .features__list {
-    margin: 0;
-    padding-left: 1.25rem;
+  .features__row {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
   }
 
-  .features__list li {
+  .features__text {
+    margin: 0;
     color: var(--color-text);
-    line-height: 1.7;
-    font-size: 0.95rem;
+    line-height: 1.8;
+    font-size: 0.975rem;
   }
 
   .features__image-wrap {
@@ -135,13 +132,13 @@ const features = [
   }
 
   @media (min-width: 768px) {
-    .features__item {
+    .features__row {
       flex-direction: row;
       align-items: center;
       gap: 3rem;
     }
 
-    .features__item--reverse {
+    .features__row--reverse {
       flex-direction: row-reverse;
     }
 

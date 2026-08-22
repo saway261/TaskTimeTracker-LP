@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320">
+  <rect width="480" height="320" fill="#e8e8e8" rx="8"/>
+  <rect x="1" y="1" width="478" height="318" fill="none" stroke="#cccccc" stroke-width="1" rx="8"/>
+  <text x="240" y="150" font-family="sans-serif" font-size="16" fill="#888888" text-anchor="middle" dominant-baseline="middle">📷 スクリーンショット</text>
+  <text x="240" y="180" font-family="sans-serif" font-size="13" fill="#aaaaaa" text-anchor="middle" dominant-baseline="middle">タスク管理 3: タイマー・手動記録</text>
+</svg>
