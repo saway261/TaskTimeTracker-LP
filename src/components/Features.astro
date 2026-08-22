@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import cycleDiagram from '../assets/cycle-diagram.svg';
 
 import ssTask01 from '../assets/screenshot-task-01.svg';
 import ssTask02 from '../assets/screenshot-task-02.svg';
@@ -59,10 +60,28 @@ for (const feature of features) {
 <section class="features">
   <div class="container">
     <h2 class="features__heading">主な機能</h2>
+    
+    <!-- サイクル図 -->
+    <div class="features__cycle">
+      <Image
+        src={cycleDiagram}
+        alt="タスク管理→振り返り→分析の継続的改善サイクル"
+        width={500}
+        height={400}
+        class="features__cycle-image"
+      />
+    </div>
+    
     {allRows.map((row) => (
       <div>
         {row.isFirstInGroup && (
-          <h3 class="features__group-title">{row.groupTitle}</h3>
+          <div class="features__group-title-wrap">
+            <span class="features__group-icon">
+              {row.groupTitle === 'タスク管理機能' ? '📋' : 
+               row.groupTitle === '振り返り機能' ? '🔍' : '📊'}
+            </span>
+            <h3 class="features__group-title">{row.groupTitle}</h3>
+          </div>
         )}
         <div class={`features__row ${row.rowIndex % 2 === 1 ? 'features__row--reverse' : ''}`}>
           <p class="features__text">{row.text}</p>
@@ -95,13 +114,40 @@ for (const feature of features) {
     margin: 0 0 3rem;
   }
 
+  .features__cycle {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 4rem;
+  }
+
+  .features__cycle-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .features__group-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 0 1.5rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-accent) 30%, var(--color-danger) 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .features__group-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
   .features__group-title {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-weight: 700;
-    color: var(--color-accent);
-    margin: 2.5rem 0 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--color-surface-muted);
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
 
   .features__row {

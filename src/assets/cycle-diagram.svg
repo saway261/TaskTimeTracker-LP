@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <!-- 背景 -->
+  <rect width="500" height="400" fill="transparent"/>
+  
+  <!-- 矢印マーカー定義 -->
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="10" 
+     refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 12 5, 0 10" fill="#e87500" stroke="#e87500" stroke-width="1"/>
+    </marker>
+  </defs>
+  
+  <!-- 1. タスク管理機能（上） -->
+  <g id="task-node">
+    <rect x="175" y="30" width="150" height="50" rx="12" ry="12" 
+          fill="none" stroke="#e87500" stroke-width="2"/>
+    <text x="250" y="48" font-family="sans-serif" font-size="14" font-weight="bold" 
+          fill="#333" text-anchor="middle">タスク管理機能</text>
+    <text x="250" y="65" font-family="sans-serif" font-size="11" 
+          fill="#666" text-anchor="middle">見積もり時間を設定</text>
+  </g>
+  
+  <!-- 2. 振り返り機能（左下） -->
+  <g id="review-node">
+    <rect x="50" y="250" width="150" height="50" rx="12" ry="12" 
+          fill="none" stroke="#e87500" stroke-width="2"/>
+    <text x="125" y="268" font-family="sans-serif" font-size="14" font-weight="bold" 
+          fill="#333" text-anchor="middle">振り返り機能</text>
+    <text x="125" y="285" font-family="sans-serif" font-size="11" 
+          fill="#666" text-anchor="middle">取り組みを反省して蓄積</text>
+  </g>
+  
+  <!-- 3. 分析機能（右下） -->
+  <g id="analytics-node">
+    <rect x="300" y="250" width="150" height="50" rx="12" ry="12" 
+          fill="none" stroke="#e87500" stroke-width="2"/>
+    <text x="375" y="268" font-family="sans-serif" font-size="14" font-weight="bold" 
+          fill="#333" text-anchor="middle">分析機能</text>
+    <text x="375" y="285" font-family="sans-serif" font-size="11" 
+          fill="#666" text-anchor="middle">反省を統計的に分析</text>
+  </g>
+  
+  <!-- 矢印 1: タスク → 振り返り -->
+  <g id="arrow1">
+    <path d="M 200 80 L 200 130 L 150 130 L 150 250" 
+          stroke="#e87500" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="110" y="165" font-family="sans-serif" font-size="10" 
+          fill="#e87500" text-anchor="middle" transform="rotate(-90 110 165)">実績との差異を振り返る</text>
+  </g>
+  
+  <!-- 矢印 2: 振り返り → 分析 -->
+  <g id="arrow2">
+    <path d="M 200 275 L 300 275" 
+          stroke="#e87500" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="250" y="265" font-family="sans-serif" font-size="10" 
+          fill="#e87500" text-anchor="middle">傾向を数値で把握</text>
+  </g>
+  
+  <!-- 矢印 3: 分析 → タスク -->
+  <g id="arrow3">
+    <path d="M 350 250 L 350 130 L 300 130 L 300 80" 
+          stroke="#e87500" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="390" y="165" font-family="sans-serif" font-size="10" 
+          fill="#e87500" text-anchor="middle" transform="rotate(90 390 165)">データで見積もり精度向上</text>
+  </g>
+  
+  <!-- 中央の改善テキスト -->
+  <text x="250" y="175" font-family="sans-serif" font-size="16" font-weight="bold" 
+        fill="#333" text-anchor="middle">継続的な見積もり精度改善</text>
+  <text x="250" y="195" font-family="sans-serif" font-size="13" 
+        fill="#666" text-anchor="middle">サイクル</text>
+</svg>
