@@ -33,6 +33,7 @@ const values = [
 
 <section class="value">
   <div class="container">
+    <h2 class="value__heading">できること</h2>
     <ul class="value__list">
       {values.map((item) => (
         <li class="value__item">
@@ -52,7 +53,18 @@ const values = [
 <style>
   .value {
     padding: 4rem 1rem;
-    background-color: var(--color-surface);
+    background:
+      radial-gradient(circle at 8% 12%, rgba(255, 183, 110, 0.34) 0%, transparent 36%),
+      radial-gradient(circle at 92% 88%, rgba(255, 217, 153, 0.42) 0%, transparent 38%),
+      linear-gradient(135deg, #fffaf4 0%, #ffefde 52%, #fff7eb 100%);
+  }
+
+  .value__heading {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--color-text);
+    text-align: center;
+    margin: 0 0 3rem;
   }
 
   .value__list {
@@ -69,9 +81,12 @@ const values = [
     align-items: flex-start;
     gap: 1rem;
     padding: 1.25rem 1.5rem;
-    background-color: var(--color-bg);
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.82);
+    border-radius: 12px;
+    border: 1px solid rgba(232, 117, 0, 0.12);
     border-left: 4px solid var(--color-accent);
+    box-shadow: 0 10px 28px rgba(128, 76, 21, 0.08);
+    backdrop-filter: blur(2px);
   }
 
   .value__icon {

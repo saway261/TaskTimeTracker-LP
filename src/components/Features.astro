@@ -1,6 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import cycleDiagram from '../assets/cycle-diagram.svg';
+import taskIcon from '../assets/feature/task.svg';
+import thinkingIcon from '../assets/feature/thinking.svg';
+import graphIcon from '../assets/feature/graph.svg';
 
 import ssTask01 from '../assets/screenshot-task-01.svg';
 import ssTask02 from '../assets/screenshot-task-02.svg';
@@ -19,6 +22,7 @@ import ssAnalytics02 from '../assets/screenshot-analytics-02.svg';
 const features = [
   {
     title: 'タスク管理機能',
+    icon: taskIcon,
     items: [
       { text: 'プロジェクトとタスクグループでタスクを体系的に管理できます', img: ssTask01, alt: 'タスク管理機能: プロジェクト管理' },
       { text: 'タスクを作成する際は必ず見積もり時間を設定します', img: ssTask02, alt: 'タスク管理機能: 見積もり時間設定' },
@@ -31,6 +35,7 @@ const features = [
   },
   {
     title: '振り返り機能',
+    icon: thinkingIcon,
     items: [
       { text: 'タスク、タスクグループ、プロジェクトそれぞれの単位で、ずれ方と実績時間と見積時間の誤差と誤差率を一望できます', img: ssReview01, alt: '振り返り機能: 誤差一覧' },
       { text: 'ずれの原因カテゴリを1つ以上3つまで選択できます。カテゴリで表現しきれない反省点は自由入力欄を活用してください。', img: ssReview02, alt: '振り返り機能: 原因カテゴリ選択' },
@@ -40,6 +45,7 @@ const features = [
   },
   {
     title: '分析機能',
+    icon: graphIcon,
     items: [
       { text: '振り返り機能で選択した原因カテゴリや、1タスクごとの見積時間の大きさ、またそのばらつきなどを統計的に整理して、視覚的にわかりやすく表示します。', img: ssAnalytics01, alt: '分析機能: 統計・視覚化' },
       { text: '※詳細実装中。文章ごと大きく差し替える可能性大です', img: ssAnalytics02, alt: '分析機能: 詳細実装中' },
@@ -48,17 +54,17 @@ const features = [
 ];
 
 // 全itemをフラットにして通し番号で交互レイアウトを決める
-const allRows: { text: string; img: ImageMetadata; alt: string; groupTitle: string; isFirstInGroup: boolean; rowIndex: number }[] = [];
+const allRows: { text: string; img: ImageMetadata; alt: string; groupTitle: string; groupIcon: ImageMetadata; isFirstInGroup: boolean; rowIndex: number }[] = [];
 let rowIndex = 0;
 for (const feature of features) {
   feature.items.forEach((item, i) => {
-    allRows.push({ ...item, groupTitle: feature.title, isFirstInGroup: i === 0, rowIndex: rowIndex++ });
+    allRows.push({ ...item, groupTitle: feature.title, groupIcon: feature.icon, isFirstInGroup: i === 0, rowIndex: rowIndex++ });
   });
 }
 ---
 
 <section class="features">
-  <div class="container">
+  <div class="container features__inner">
     <h2 class="features__heading">主な機能</h2>
     
     <!-- サイクル図 -->
@@ -76,9 +82,8 @@ for (const feature of features) {
       <div>
         {row.isFirstInGroup && (
           <div class="features__group-title-wrap">
-            <span class="features__group-icon">
-              {row.groupTitle === 'タスク管理機能' ? '📋' : 
-               row.groupTitle === '振り返り機能' ? '🔍' : '📊'}
+            <span class="features__group-icon" aria-hidden="true">
+              <Image src={row.groupIcon} alt="" width={40} height={40} class="features__group-icon-image" />
             </span>
             <h3 class="features__group-title">{row.groupTitle}</h3>
           </div>
@@ -104,6 +109,11 @@ for (const feature of features) {
   .features {
     padding: 4rem 1rem;
     background-color: var(--color-bg);
+  }
+
+  .features__inner {
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .features__heading {
@@ -138,8 +148,19 @@ for (const feature of features) {
   }
 
   .features__group-icon {
-    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     flex-shrink: 0;
+  }
+
+  .features__group-icon-image {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
   }
 
   .features__group-title {
