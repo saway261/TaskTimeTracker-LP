@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1125"
+   height="1125"
+   viewBox="0 0 1125 1125"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true">
+    <inkscape:grid
+       id="grid11"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+    <inkscape:page
+       x="0"
+       y="0"
+       width="1125"
+       height="1125"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch8"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="swatch6"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="swatch4"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="swatch3"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       id="swatch2"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="swatch1"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#a19800;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none">
+    <path
+       style="display:none;fill:none;fill-opacity:1;stroke:#f63cff;stroke-width:236.974;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="circle10"
+       sodipodi:type="arc"
+       sodipodi:cx="-752.94427"
+       sodipodi:cy="-238.49431"
+       sodipodi:rx="441.56281"
+       sodipodi:ry="441.56281"
+       sodipodi:start="0.026798537"
+       sodipodi:end="2.1590635"
+       sodipodi:arc-type="arc"
+       d="m -311.54002,-226.66249 a 441.56281,441.56281 0 0 1 -238.33629,380.26653 441.56281,441.56281 0 0 1 -448.10013,-24.7607"
+       inkscape:transform-center-x="2.9434304"
+       inkscape:transform-center-y="-222.18157"
+       transform="rotate(-152.69069)"
+       sodipodi:open="true"
+       sodipodi:insensitive="true" />
+    <path
+       style="display:none;fill:none;fill-opacity:1;stroke:#00a982;stroke-width:236.974;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path10"
+       sodipodi:type="arc"
+       sodipodi:cx="584.95862"
+       sodipodi:cy="-531.36121"
+       sodipodi:rx="441.56281"
+       sodipodi:ry="441.56281"
+       sodipodi:start="0.047540085"
+       sodipodi:end="2.1311482"
+       sodipodi:arc-type="arc"
+       d="M 1026.0225,-510.37718 A 441.56281,441.56281 0 0 1 789.43168,-139.99376 441.56281,441.56281 0 0 1 350.27492,-157.32742"
+       inkscape:transform-center-x="211.68128"
+       inkscape:transform-center-y="107.63317"
+       transform="rotate(87.30931)"
+       sodipodi:open="true"
+       sodipodi:insensitive="true" />
+    <path
+       style="display:none;fill:#b3ff80;fill-opacity:1;stroke:#85a000;stroke-width:236.974;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path11"
+       sodipodi:type="arc"
+       sodipodi:cx="169.63734"
+       sodipodi:cy="773.7301"
+       sodipodi:rx="441.56281"
+       sodipodi:ry="441.56281"
+       sodipodi:start="0.051147934"
+       sodipodi:end="2.1432185"
+       sodipodi:arc-type="arc"
+       d="M 610.62269,796.30528 A 441.56281,441.56281 0 0 1 371.0362,1166.6884 441.56281,441.56281 0 0 1 -69.543845,1144.904"
+       inkscape:transform-center-x="-218.03314"
+       inkscape:transform-center-y="102.32616"
+       transform="rotate(-32.69069)"
+       sodipodi:open="true"
+       sodipodi:insensitive="true" />
+  </g>
+  <g
+     inkscape:label="Layer 1 コピー"
+     inkscape:groupmode="layer"
+     id="g14"
+     style="display:inline">
+    <path
+       style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#e55151;fill-opacity:1;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+       d="M 853.74652,421.37944 C 902.07021,521.7328 895.4018,639.43978 836.05366,733.69355 776.70551,827.94733 673.441,884.83103 562.05908,884.62365 l 91.77973,116.48705 -92.22024,120.4871 C 754.2629,1121.9566 933.93926,1022.9819 1036.5869,859.96219 1139.2344,696.94241 1152,481.99998 1061.2564,304.56742 l -142.75494,-4.59399 z"
+       id="path14"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#ffd579;fill-opacity:1;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+       d="M 538.73179,883.7288 C 427.81854,876.33018 328.84307,812.75061 275.99964,714.95459 223.15621,617.15857 224.21456,499.52477 278.80883,402.69526 L 131.59703,424.50266 72.385227,286.31005 C -22.041687,453.78756 -23.883401,658.45892 67.515239,827.6081 158.91388,996.75732 332,1112 536.9588,1120.1772 l 89.8865,-116.2241 z"
+       id="path13"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#ff872e;fill-opacity:1;stroke:none;stroke-linejoin:round;stroke-opacity:1;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+       d="m 290.59406,383.48505 c 61.85164,-95.30864 168.72397,-150.968 282.27424,-147.00615 113.55028,3.96185 216.28552,66.93404 271.34407,166.32176 l 65.64516,-121.41822 141.64517,6.58178 C 956.29084,116.09471 777.49334,6.5007785 581.13278,-0.3503779 384.77221,-7.2015253 182,92 81.809566,270.48174 l 59.392244,132.50165 z"
+       id="path12"
+       sodipodi:nodetypes="cscccsccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 1 コピー 1">
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:96px;line-height:0.9;font-family:'Microsoft YaHei UI';-inkscape-font-specification:'Microsoft YaHei UI Bold';text-align:center;letter-spacing:0px;word-spacing:-0.01px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#3e3e3e;fill-opacity:1;stroke:none;stroke-width:300;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="562"
+       y="482"
+       id="text15"><tspan
+         sodipodi:role="line"
+         id="tspan15"
+         x="562"
+         y="482"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:0.9;font-family:Meiryo;-inkscape-font-specification:Meiryo;letter-spacing:0px;word-spacing:-0.01px;fill:#3e3e3e;fill-opacity:1"
+         dy="-1">継続的な</tspan><tspan
+         sodipodi:role="line"
+         x="562"
+         y="579.51532"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:0.9;font-family:Meiryo;-inkscape-font-specification:Meiryo;letter-spacing:0px;word-spacing:-0.01px;fill:#3e3e3e;fill-opacity:1"
+         id="tspan16">見積もり改善</tspan><tspan
+         sodipodi:role="line"
+         x="562"
+         y="677.0307"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:0.9;font-family:Meiryo;-inkscape-font-specification:Meiryo;letter-spacing:0px;word-spacing:-0.01px;fill:#3e3e3e;fill-opacity:1"
+         id="tspan17">サイクル</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:0.9;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';letter-spacing:-8px;word-spacing:-0.01px;writing-mode:lr-tb;direction:ltr;fill:#3e3e3e;fill-opacity:1;stroke:none;stroke-width:300;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="text18"
+       inkscape:label="タスク管理"><textPath
+         xlink:href="#path20"
+         id="textPath20"><tspan
+           id="tspan18"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';letter-spacing:-8px;word-spacing:-0.01px;fill:#3e3e3e;fill-opacity:1">　　 タスク管理機能</tspan></textPath></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:0.9;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';letter-spacing:0px;word-spacing:-0.01px;writing-mode:lr-tb;direction:ltr;fill:#3e3e3e;fill-opacity:1;stroke:none;stroke-width:300;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="text19"
+       inkscape:label="振り返り"><textPath
+         xlink:href="#path21"
+         id="textPath21"><tspan
+           id="tspan19"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';fill:#3e3e3e;fill-opacity:1">　　振り返り機能</tspan></textPath></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:0.9;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';letter-spacing:0px;word-spacing:-0.01px;writing-mode:lr-tb;direction:ltr;fill:#3e3e3e;fill-opacity:1;stroke:none;stroke-width:300;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="text20"
+       inkscape:label="分析機能"><textPath
+         xlink:href="#path22"
+         id="textPath22"><tspan
+           id="tspan20"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';fill:#3e3e3e;fill-opacity:1">　分析機能</tspan></textPath></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 142,402 C 302,42 762,62 902,282"
+       id="path20"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 122,442 c -60,340 140,580 480,560"
+       id="path21"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 653.83881,1001.1107 C 922,962 1142,562 922,302"
+       id="path22"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 302,322 C 462,102 802,202 862,342"
+       id="path23"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 82,322 C -58,602 62,1042 541.81517,1099.5068"
+       id="path24"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 582,1102 c 280,-20 640,-280 460,-800"
+       id="path25"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;line-height:1;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';letter-spacing:-8px;word-spacing:-0.01px;writing-mode:lr-tb;direction:ltr;fill:#3e3e3e;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="text25"
+       inkscape:label="見積もり時間と実績時間をためる"
+       transform="translate(-4.9585931,11.868856)"><textPath
+         xlink:href="#path23"
+         id="textPath27"><tspan
+           id="tspan25"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic'">見積時間と実績時間をためる</tspan></textPath></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:0.9;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';letter-spacing:-8px;word-spacing:-0.01px;writing-mode:lr-tb;direction:ltr;fill:#3e3e3e;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="text26"
+       inkscape:label="ずれの原因を見つめる"><textPath
+         xlink:href="#path24"
+         id="textPath28"><tspan
+           id="tspan26"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic'">　　　　　　　　ずれの原因を見つめる</tspan></textPath></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:0.9;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';letter-spacing:-8.02px;word-spacing:-0.01px;writing-mode:lr-tb;direction:ltr;fill:#3e3e3e;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="text27"
+       inkscape:label="ずれの原因を見つめる"><textPath
+         xlink:href="#path25"
+         id="textPath29"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Yu Gothic';-inkscape-font-specification:'Yu Gothic';letter-spacing:-8.02px">　　　フィードバックを次に役立てる</textPath></text>
+  </g>
+</svg>

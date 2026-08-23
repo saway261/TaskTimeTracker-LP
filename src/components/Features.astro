@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import cycleDiagram from '../assets/cycle-diagram.svg';
+import featureDiagram from '../assets/3-feature-diagram.svg';
 import taskIcon from '../assets/feature/task.svg';
 import thinkingIcon from '../assets/feature/thinking.svg';
 import graphIcon from '../assets/feature/graph.svg';
@@ -70,10 +70,10 @@ for (const feature of features) {
     <!-- サイクル図 -->
     <div class="features__cycle">
       <Image
-        src={cycleDiagram}
+        src={featureDiagram}
         alt="タスク管理→振り返り→分析の継続的改善サイクル"
         width={500}
-        height={400}
+        height={500}
         class="features__cycle-image"
       />
     </div>
