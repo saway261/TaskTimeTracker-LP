@@ -5,19 +5,18 @@ import taskIcon from '../assets/feature/task.svg';
 import thinkingIcon from '../assets/feature/thinking.svg';
 import graphIcon from '../assets/feature/graph.svg';
 
-import ssTask01 from '../assets/screenshot-task-01.svg';
-import ssTask02 from '../assets/screenshot-task-02.svg';
-import ssTask03 from '../assets/screenshot-task-03.svg';
-import ssTask04 from '../assets/screenshot-task-04.svg';
-import ssTask05 from '../assets/screenshot-task-05.svg';
-import ssTask06 from '../assets/screenshot-task-06.svg';
-import ssTask07 from '../assets/screenshot-task-07.svg';
-import ssReview01 from '../assets/screenshot-review-01.svg';
-import ssReview02 from '../assets/screenshot-review-02.svg';
-import ssReview03 from '../assets/screenshot-review-03.svg';
-import ssReview04 from '../assets/screenshot-review-04.svg';
-import ssAnalytics01 from '../assets/screenshot-analytics-01.svg';
-import ssAnalytics02 from '../assets/screenshot-analytics-02.svg';
+import ssTask01 from '../assets/screenshot-task-01.png';
+import ssTask02 from '../assets/screenshot-task-02.png';
+import ssTask03 from '../assets/screenshot-task-03.png';
+import ssTask04 from '../assets/screenshot-task-04.png';
+import ssTask05 from '../assets/screenshot-task-05.png';
+import ssTask06 from '../assets/screenshot-task-06.png';
+import ssTask07 from '../assets/screenshot-task-07.png';
+import ssReview01 from '../assets/screenshot-review-01.png';
+import ssReview02 from '../assets/screenshot-review-02.png';
+import ssReview03 from '../assets/screenshot-review-03.png';
+import ssAnalytics01 from '../assets/screenshot-analytics-01.png';
+import ssAnalytics02 from '../assets/screenshot-analytics-02.png';
 
 const features = [
   {
@@ -40,7 +39,7 @@ const features = [
       { text: 'タスク、タスクグループ、プロジェクトそれぞれの単位で、ずれ方と実績時間と見積時間の誤差と誤差率を一望できます', img: ssReview01, alt: '振り返り機能: 誤差一覧' },
       { text: 'ずれの原因カテゴリを1つ以上3つまで選択できます。カテゴリで表現しきれない反省点は自由入力欄を活用してください。', img: ssReview02, alt: '振り返り機能: 原因カテゴリ選択' },
       { text: 'ずれの原因カテゴリは、超過のケースと短縮のケースそれぞれに対応！', img: ssReview03, alt: '振り返り機能: 超過・短縮対応' },
-      { text: '真摯に入力することが、分析機能の価値をぐんと上げます！', img: ssReview04, alt: '振り返り機能: 真摯な入力' },
+      { text: '真摯に入力することが、分析機能の価値をぐんと上げます！' },
     ],
   },
   {
@@ -48,13 +47,13 @@ const features = [
     icon: graphIcon,
     items: [
       { text: '振り返り機能で選択した原因カテゴリや、1タスクごとの見積時間の大きさ、またそのばらつきなどを統計的に整理して、視覚的にわかりやすく表示します。', img: ssAnalytics01, alt: '分析機能: 統計・視覚化' },
-      { text: '※詳細実装中。文章ごと大きく差し替える可能性大です', img: ssAnalytics02, alt: '分析機能: 詳細実装中' },
+      { text: 'タグフィルターを使うことで、同質のタスクに共通する傾向を眺められます', img: ssAnalytics02, alt: '分析機能: 詳細実装中' },
     ],
   },
 ];
 
 // 全itemをフラットにして通し番号で交互レイアウトを決める
-const allRows: { text: string; img: ImageMetadata; alt: string; groupTitle: string; groupIcon: ImageMetadata; isFirstInGroup: boolean; rowIndex: number }[] = [];
+const allRows: { text: string; img?: ImageMetadata; alt?: string; groupTitle: string; groupIcon: ImageMetadata; isFirstInGroup: boolean; rowIndex: number }[] = [];
 let rowIndex = 0;
 for (const feature of features) {
   feature.items.forEach((item, i) => {
@@ -90,15 +89,17 @@ for (const feature of features) {
         )}
         <div class={`features__row ${row.rowIndex % 2 === 1 ? 'features__row--reverse' : ''}`}>
           <p class="features__text">{row.text}</p>
-          <div class="features__image-wrap">
-            <Image
-              src={row.img}
-              alt={row.alt}
-              width={480}
-              height={320}
-              class="features__image"
-            />
-          </div>
+          {row.img && (
+            <div class="features__image-wrap">
+              <Image
+                src={row.img}
+                alt={row.alt ?? ''}
+                width={480}
+                height={320}
+                class="features__image"
+              />
+            </div>
+          )}
         </div>
       </div>
     ))}
