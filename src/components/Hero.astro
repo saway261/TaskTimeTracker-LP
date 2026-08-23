@@ -1,25 +1,75 @@
 ---
 import { Image } from 'astro:assets';
-import placeholderIcon from '../assets/placeholder-icon.svg';
+import icon from '../assets/icon.svg';
+import titleLogo from '../assets/title.svg';
+import carouselGraph from '../assets/carousel/carousel-graph.png';
+import carouselProject from '../assets/carousel/carousel-project.png';
+import carouselSuii from '../assets/carousel/carousel-suii.png';
+import carouselTimer from '../assets/carousel/carousel-timer.png';
 
 interface Props {
   appUrl: string;
 }
 
 const { appUrl } = Astro.props;
+
+const carouselImages = [
+  carouselProject,
+  carouselTimer,
+  carouselGraph,
+  carouselSuii,
+];
 ---
 
 <section class="hero">
+  <div class="hero__carousel" aria-hidden="true">
+    <div class="hero__carousel-mobile">
+      {carouselImages.map((image) => (
+        <Image
+          src={image}
+          alt=""
+          class="hero__carousel-mobile-image"
+          loading="eager"
+          decoding="async"
+        />
+      ))}
+    </div>
+
+    <div class="hero__carousel-desktop">
+      <div class="hero__carousel-track">
+        {[0, 1].map((setIndex) => (
+          <div class="hero__carousel-set">
+            {carouselImages.map((image, imageIndex) => (
+              <Image
+                src={image}
+                alt=""
+                class="hero__carousel-desktop-image"
+                loading={setIndex === 0 && imageIndex < 3 ? 'eager' : 'lazy'}
+                decoding="async"
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  <div class="hero__veil" aria-hidden="true"></div>
+
   <div class="container hero__inner">
     <div class="hero__text">
-      <p class="hero__service-name">Task Time Tracker</p>
+      <Image
+        src={titleLogo}
+        alt="Task Time Tracker"
+        height={40}
+        class="hero__title-logo"
+      />
       <h1 class="hero__catch">己と向き合うタスク管理アプリ</h1>
       <a href={appUrl} class="btn-primary">使ってみる</a>
     </div>
     <div class="hero__visual">
       <Image
-        src={placeholderIcon}
-        alt="Task Time Tracker サービスアイコン（プレースホルダー）"
+        src={icon}
+        alt="Task Time Tracker アイコン"
         width={200}
         height={200}
         class="hero__logo"
@@ -30,11 +80,70 @@ const { appUrl } = Astro.props;
 
 <style>
   .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
     padding: 4rem 1rem;
   }
 
+  .hero__carousel,
+  .hero__veil {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero__carousel {
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .hero__veil {
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.55);
+    pointer-events: none;
+  }
+
+  .hero__carousel-mobile {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .hero__carousel-mobile-image {
+    grid-area: 1 / 1;
+    width: min(92vw, 390px);
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    filter: saturate(0.3) contrast(0.82) brightness(1.08);
+    animation: hero-mobile-crossfade 24s linear infinite;
+  }
+
+  .hero__carousel-mobile-image:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .hero__carousel-mobile-image:nth-child(2) {
+    animation-delay: -18s;
+  }
+
+  .hero__carousel-mobile-image:nth-child(3) {
+    animation-delay: -12s;
+  }
+
+  .hero__carousel-mobile-image:nth-child(4) {
+    animation-delay: -6s;
+  }
+
+  .hero__carousel-desktop {
+    display: none;
+  }
+
   .hero__inner {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,20 +156,18 @@ const { appUrl } = Astro.props;
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
+    width: 100%;
+    min-width: 0;
   }
 
-  .hero__service-name {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+  .hero__title-logo {
+    width: min(84vw, 340px);
+    height: auto;
   }
 
   .hero__catch {
     margin: 0;
-    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    font-size: clamp(1.5rem, 4.2vw, 2.35rem);
     font-weight: 800;
     line-height: 1.3;
     color: var(--color-text);
@@ -77,6 +184,81 @@ const { appUrl } = Astro.props;
     height: auto;
   }
 
+  @keyframes hero-mobile-crossfade {
+    0%,
+    21% {
+      opacity: 0.72;
+    }
+
+    25%,
+    96% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.72;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      min-height: 520px;
+    }
+
+    .hero__carousel-mobile {
+      display: none;
+    }
+
+    .hero__carousel-desktop {
+      position: absolute;
+      inset: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      transform: rotate(-1.5deg) scale(1.04);
+      transform-origin: center;
+    }
+
+    .hero__carousel-track {
+      display: flex;
+      gap: 1.25rem;
+      width: max-content;
+      animation: hero-desktop-scroll 42s linear infinite;
+    }
+
+    .hero__carousel-set {
+      display: flex;
+      flex-shrink: 0;
+      gap: 1.25rem;
+    }
+
+    .hero__carousel-desktop-image {
+      width: clamp(220px, 22vw, 310px);
+      height: auto;
+      max-height: 490px;
+      border-radius: 18px;
+      object-fit: contain;
+      opacity: 0.68;
+      filter: saturate(0.28) contrast(0.82) brightness(1.08);
+      box-shadow: 0 16px 40px rgba(18, 20, 24, 0.16);
+    }
+
+    .hero__veil {
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0.3) 100%),
+        rgba(255, 255, 255, 0.42);
+    }
+
+    .hero__title-logo {
+      width: min(46vw, 380px);
+    }
+
+    @keyframes hero-desktop-scroll {
+      to {
+        transform: translateX(calc(-50% - 0.625rem));
+      }
+    }
+  }
+
   @media (min-width: 1024px) {
     .hero__inner {
       flex-direction: row;
@@ -87,6 +269,15 @@ const { appUrl } = Astro.props;
     .hero__text {
       align-items: flex-start;
       flex: 1;
+      width: auto;
+    }
+
+    .hero__title-logo {
+      width: min(42vw, 440px);
+    }
+
+    .hero__catch {
+      font-size: 2.05rem;
     }
 
     .hero__visual {
@@ -97,6 +288,17 @@ const { appUrl } = Astro.props;
     .hero__logo {
       width: 200px;
       height: 200px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__carousel-mobile-image,
+    .hero__carousel-track {
+      animation: none;
+    }
+
+    .hero__carousel-mobile-image:first-child {
+      opacity: 0.72;
     }
   }
 </style>
