@@ -7,12 +7,6 @@ import carouselProject from '../assets/carousel/carousel-project.png';
 import carouselSuii from '../assets/carousel/carousel-suii.png';
 import carouselTimer from '../assets/carousel/carousel-timer.png';
 
-interface Props {
-  appUrl: string;
-}
-
-const { appUrl } = Astro.props;
-
 const carouselImages = [
   carouselProject,
   carouselTimer,
@@ -64,7 +58,7 @@ const carouselImages = [
         class="hero__title-logo"
       />
       <h1 class="hero__catch">己と向き合うタスク管理アプリ</h1>
-      <a href={appUrl} class="btn-primary">使ってみる</a>
+      <span class="btn-primary hero__cta-placeholder" aria-hidden="true">使ってみる</span>
     </div>
     <div class="hero__visual">
       <Image
@@ -173,6 +167,12 @@ const carouselImages = [
     color: var(--color-text);
   }
 
+  .hero__cta-placeholder {
+    visibility: hidden;
+    pointer-events: none;
+    user-select: none;
+  }
+
   .hero__visual {
     display: flex;
     justify-content: center;
@@ -206,6 +206,10 @@ const carouselImages = [
     }
 
     .hero__carousel-mobile {
+      display: none;
+    }
+
+    .hero__cta-placeholder {
       display: none;
     }
 
